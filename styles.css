@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    /* Light mode colors */
+    --primary-color-light: rgb(85, 25, 85);
+    --secondary-color-light: rgb(246, 245, 245);
+    --temp-color-light:rgba(235, 214, 235, 0.379);
+
+    /* Dark mode colors */
+    --primary-color-dark: #333;
+    --secondary-color-dark: #ddd;
+    --temp-color-dark:rgba(0, 0, 0, 0.379);
+}
+
+body {
+    /* Default to light mode */
+    --primary-color: var(--primary-color-light);
+    --secondary-color: var(--secondary-color-light);
+    --temp-color:var(--temp-color-light);
+    /* Other body styles */
+}
+
+/* Other existing styles */
+
+/* Night mode specific styles */
+body.night-mode {
+    --primary-color: var(--primary-color-dark);
+    --secondary-color: var(--secondary-color-dark);
+    --temp-color:var(--temp-color-dark)
+    /* Additional styles for dark mode */
+}
+.btn{
+    position: relative;
+    right: -70%;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.container {
+    padding: 10px 8%;
+}
+
+header {
+    margin-top: 40px;
+}
+
+.main-heading h1 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.main-heading p {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.rating-card {
+    background-color: var(--temp-color);
+    padding: 10px 30px;
+    margin: 20px 0;
+}
+
+.icons-container {
+    text-align: center;
+}
+
+.rating-card>p {
+    text-align: center;
+    margin: 10px 0;
+    color: var(--primary-color);
+}
+
+.testimonial-card {
+    background-color: var(--primary-color);
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 10px;
+    color: var(--secondary-color)
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-right: 20px;
+}
+
+.detail h3,
+.detail h4 {
+    margin: 5px 0;
+}
+.highlight{
+    color: pink;
+}
+@media screen and (min-width:900px) {
+
+    header {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .main-heading {
+        width: 30%;
+        margin-right: 80px;
+    }
+
+    .main-heading h1,
+    .main-heading p {
+        text-align: left;
+    }
+
+    .main-heading h1 {
+        margin-bottom: 15px;
+    }
+
+    .rating-card {
+        display: flex;
+        align-items: center;
+        border-radius: 15px;
+    }
+
+    .icons-container {
+        margin-right: 10px;
+    }
+
+    .rating-card.item-1 {
+        position: relative;
+        top: 15px;
+    }
+
+    .rating-card.item-2 {
+        position: relative;
+        top: 20px;
+        left: 80px;
+    }
+
+    .rating-card.item-3 {
+        position: relative;
+        top: 20px;
+        left: 150px;
+    }
+
+    .testimonial-section,
+    .rating-section {
+        position: relative;
+    }
+    .testimonial-section {
+        display: flex;
+        margin: 20px 0;
+    }
+
+    .testimonial-card {
+        width: 100%; /*why working here*/
+        margin-right: 25px;
+    }
+
+    .testimonial-card.item-1 {
+        position: relative;
+    }
+    .testimonial-card.item-2 {
+        position: relative;
+        top: 15px;
+
+    }
+    .testimonial-card.item-3 {
+        position: relative;
+        top: 30px;
+    }
+}
+
